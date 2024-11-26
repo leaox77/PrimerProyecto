@@ -43,48 +43,6 @@ body{
 
 }
 
-#nav {
-    height: 160px;
-    width: 100%;
-    /* background-color: red; */
-    display: flex;
-    align-items: center;
-    padding: 0 120px;
-    gap: 50px;
-    position: fixed;
-    justify-content: space-between;
-    z-index: 999;
-    background-color: #f0eeeeb6;
-  }
-  #nav img {
-    height: 4.5vw;
-  }
-
-  #nav .nav-links {
-    display: flex;
-    justify-content: center;
-    gap: 50px; /* Espacio entre los enlaces */
-    flex-grow: 1;
-    
-}
-
-#nav a {
-    text-transform: capitalize; /* Cambia a mayúsculas y minúsculas */
-    font-weight: 500;
-    cursor: none; /* Elimina el cursor predeterminado */
-    font-size: 1.15vw;
-    text-decoration: none; /* Elimina la línea del enlace */
-    position: relative; /* Necesario para el efecto del cursor */
-    transition: color 0.5s ease, background-color 0.5s ease; /* Suaviza la transición de color */
-    color: #fff;
-    
-}
-
-#nav a:hover {
-    color: black/* tu color deseado aquí */;/* Cambia el color del texto al pasar el cursor */
-   /* background-color: pink /* tu color de fondo deseado aquí */; /* Cambia el color de fondo al pasar el cursor */
-}
-
 .btn {
   display: flex;
   flex-direction: column; /* Coloca el texto en columnas */
@@ -208,7 +166,10 @@ body{
     color: #ec615b;
     font-weight: 800;
 }
-
+.main-areglo{
+    width: 100%;
+    padding: 0;
+}
 
 
 

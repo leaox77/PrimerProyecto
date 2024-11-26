@@ -1,33 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 body{
-    margin: 0;
-    background-color: #000;
-    color: #eee;
-    font-family: Poppins;
-    font-size: 12px;
+    background: linear-gradient(5deg, #c22f87,rgb(105, 32, 105),rgb(127, 131, 246),rgb(21, 209, 209),rgb(245, 137, 245));
+    background-size: 400% 400%;
+    animation: gradiente 5s ease infinite;
 }
-a{
-    text-decoration: none;
+@keyframes gradiente{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
 }
-header{
-    width: 1140px;
-    max-width: 80%;
-    margin: auto;
-    height: 50px;
+
+.ajustar-carousel{
+    justify-content: center;
     display: flex;
-    align-items: center;
-    position: relative;
-    z-index: 100;
-}
-header a{
-    color: #eee;
-    margin-right: 40px;
 }
 /* carousel */
 .carousel{
-    height: 100vh;
-    margin-top: -50px;
-    width: 100vw;
+    border-radius: 20px;
+    height: 80vh;
+    margin-top: 200px;
+    width: 70vw;
     overflow: hidden;
     position: relative;
 }
@@ -57,34 +55,45 @@ header a{
 .carousel .list .item .author{
     font-weight: bold;
     letter-spacing: 10px;
+    text-decoration: underline;
 }
 .carousel .list .item .title,
 .carousel .list .item .topic{
     font-size: 5em;
     font-weight: bold;
     line-height: 1.3em;
+    text-shadow: 0px 0px 10px rgb(145, 49, 236),
+    0px 0px 20px rgb(145, 49, 236),
+    0px 0px 40px rgb(145, 49, 236),
+    0px 0px 80px rgb(145, 49, 236);
+    font-family: system-ui;
+    letter-spacing: 10px;
+
 }
 .carousel .list .item .topic{
-    color: #f1683a;
+    color: #ffffff;
 }
-.carousel .list .item .buttons{
-    display: grid;
-    grid-template-columns: repeat(2, 130px);
-    grid-template-rows: 40px;
-    gap: 5px;
-    margin-top: 20px;
-}
-.carousel .list .item .buttons button{
-    border: none;
-    background-color: #eee;
+.carousel .list .item .buttons .un-boton{
+    border-radius: 5px;
+    padding: 8px;
     letter-spacing: 3px;
     font-family: Poppins;
     font-weight: 500;
+    background-color: rgba(241, 234, 234, 0.479);
+    border: none;
+    color: #000000;
+    font-size: 20px;
+    box-shadow: 15px 15px 10px black;
 }
-.carousel .list .item .buttons button:nth-child(2){
+.carousel .list .item .buttons .un-boton:nth-child(2){
     background-color: transparent;
     border: 1px solid #fff;
     color: #eee;
+}
+.carousel .list .item .buttons .un-boton:hover{
+    background:linear-gradient(to right, rgb(224, 71, 224),rgb(122, 62, 122));
+    border-color: white;
+    box-shadow: 5px 5px 20px palevioletred;
 }
 /* thumbail */
 .thumbnail{
@@ -117,9 +126,8 @@ header a{
 }
 .thumbnail .item .content .title{
     font-weight: 500;
-}
-.thumbnail .item .content .description{
-    font-weight: 300;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
 }
 /* arrows */
 .arrows{
@@ -133,7 +141,7 @@ header a{
     gap: 10px;
     align-items: center;
 }
-.arrows button{
+.arrows .buton-move{
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -144,7 +152,7 @@ header a{
     font-weight: bold;
     transition: .5s;
 }
-.arrows button:hover{
+.arrows .buton-move:hover{
     background-color: #fff;
     color: #000;
 }

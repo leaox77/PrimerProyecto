@@ -4,7 +4,11 @@
   box-sizing: border-box;
   font-family: "montserrat";
   color: #fff;
+  box-sizing: border-box;
 }
+
+/*RESPOSIVO*/
+
 body{
   display: flex;
   flex-direction: column;
@@ -235,6 +239,89 @@ body {
 #nav a:hover {
   color: white;
   
+}
+.label-list{
+  font-size: 50px;
+  color: white;
+  float: right;
+  line-height: 80px ;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+.menus{
+  display: none;
+}
+
+@media screen and (max-width: 952px){
+  #nav .lis-resposive{
+      position: absolute;
+      width: 100%;
+      top:150px;
+      height: 60vh;
+      background: #0000004a;
+      text-align: center;
+      padding: 0;
+      margin: 0;
+      left: 0;
+      transition: 0.5s;
+      z-index: 100;
+      overflow: hidden;
+  }
+  #nav .nav-links {
+    font-size: 30px;
+    flex-direction: column;
+    padding: 20px;
+    width: 100%;
+  }
+  #check:checked ∼ .menus{
+    display: block;
+
+  }
+  #check:checked ∼ .menus + .lis-resposive{
+    height: 80vh;
+    padding: 50px 0;
+  }
+  .menus{
+    display: block;
+  }
+  .menus .label-list{
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    cursor: pointer;
+    display: block;
+  }
+  .x-icon{
+    display: none;
+  }
+  #check:checked ∼ .menus .label-list .line-icon{
+    display: none;
+  }
+  #check:checked ∼ .menus .label-list .x-icon{
+    display: block;
+  }
+
+  #footer{
+    display: flex;
+    flex-direction: column;
+    padding: 5rem;
+  }
+  .social-login-icons{
+    display: flex;
+    justify-content: end;
+  }
+      body{
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+    #nav{
+        
+        padding: 1rem;
+    }
 }
 
 .white-text:hover {
@@ -490,11 +577,13 @@ body {
 
 .container00 {
   width: 100%;
-  height: 100vh;
+  height: 100%;
+  padding: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  flex-wrap: wrap;
 }
 
 .container00 .box01 {
@@ -509,6 +598,8 @@ body {
   padding: 2rem;
   color: white;
   overflow: hidden;
+  flex-grow: 1;
+  flex-basis: 200;
 }
 
 .container00 .box01:nth-child(2){
@@ -560,6 +651,7 @@ body {
   justify-content: center;
   gap: 70px;
   position: relative;
+  top: 10vh;
 }
 
 .elem {
@@ -636,7 +728,6 @@ body {
 
 
 #f1{
-  width: fit-content;
   position: relative;
   z-index: 99;
   /* background-color: red; */
@@ -768,4 +859,4 @@ body {
 .socialcontainer:hover .social-icon-5 {
   transform: translateY(-70px);
 }                                        
-     
+   

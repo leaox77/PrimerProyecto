@@ -14,13 +14,18 @@ body{
     100%{
         background-position: 0% 50%;
     }
-}  
+}
+
+.ajustar{
+    justify-content: center;
+    display: flex;
+}
 .body{
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    
+    margin-top: 10%;
     
 }
 .wrapper{
@@ -295,15 +300,34 @@ body{
 }
 .formulario__validacion-estado{
     position: absolute;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
+    top: 40%;
+    right: 25px;
     font-size: 18px;
     color: white;
-    opacity: 0;
     z-index: 100; 
+    color: red;
+    opacity: 0;
 }
-
+.formulario__validacion-estado-activo{
+    opacity: 1;
+    position: absolute;
+    top: 40%;
+    right: 25px;
+    font-size: 18px;
+    color: white;
+    z-index: 100; 
+    color: red;
+}
+.formulario__validacion-estado-correcto{
+    position: absolute;
+    top: 40%;
+    right: 25px;
+    font-size: 18px;
+    color: white;
+    z-index: 100; 
+    color: rgb(10, 244, 134);
+    opacity: 1;
+}
 .formulario__label{
     font-size: 15px;
     display: flex;
@@ -333,9 +357,42 @@ body{
     display: none;
 }
 .formulario__mensaje-exito-activo{
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    margin: 5px;
+    background: rgb(106, 214, 222);
+    border-radius: 10px;
+    padding: 5px;
+}
+.formulario__mensaje1{
+    font-size: 15px;
+    background-color: #b584c0;
+    padding: 5px;
+    text-align: center;
+    color: rgb(13, 1, 5);
+    height: 45px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    display: none;
+}
+.formulario__mensaje1-active{
     display: block;
 }
-.formulario__grupo-correcto .formulario__validacion-estado {
+.formulario__mensaje1-exito{
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    margin: 5px;
+    background: rgb(106, 214, 222);
+    border-radius: 10px;
+    padding: 5px;
+    display: none;
+}
+.formulario__mensaje1-exito-activo{
+    display: block;
+}
+/* .formulario__grupo-correcto .formulario__validacion-estado {
 	color: #68b6e7;
 	opacity: 1;
 }
@@ -344,14 +401,25 @@ body{
 	color: #000000;
 }
 
-.formulario__grupo-incorrecto .formulario__validacion-estado {
-	color: #000000;
-	opacity: 1;
-}
+
 
 .formulario__grupo-incorrecto .formulario__input {
 	border: 3px solid #000000;
 
 }
 
+  
+  .formulario__grupo-incorrecto .formulario__input-error {
+    display: block;
+  }
+  
+  .formulario__grupo-correcto .formulario__input-error {
+    display: none;
+  }
+  
+  .formulario__mensaje-activo {
+    display: block;
+  }
+  
 
+ */

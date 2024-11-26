@@ -7,23 +7,33 @@
     <link rel="stylesheet" href="iniciar-seccion.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 	<link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="responsivo.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 </head>
 
 <body>
-  <div id="nav">
-
-    <div class="nav-links">
-      <a href="index.html">INICIO</a><span></span>
-      <a href="empieza.html">IA</a><span></span>
-      <a href="planes.html">Planes</a><span></span>
-      <a href="testimonios.html">Testimonios</a><span></span>
+  <nav id="nav">
+    <input type="checkbox" id="check">
+    <div class="menus">
+      <label class="label-list" for="check"></label>
+      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="50" fill="currentColor" class="line-icon" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="50" fill="currentColor" class="x-icon" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+      </svg>
     </div>
-    <a href="iniciar-seccion.html" class="btn">
-      <span class="hola">INICIAR<br>SESION</span>
-    </a>
-
-
-  </div>
+    <div class="lis-resposive">
+      <div class="nav-links ajustar">
+        <a href="index.html">INICIO</a><span></span>
+        <a href="empieza.html">IA</a><span></span>
+        <a href="herramienta.html">HERRAMIENTAS</a><span></span>
+        <a href="planes.html">PLANES</a><span></span>
+    </div>
+    </div>
+  </nav>
   <div id="cursor"></div>
     
     <div class="body">
@@ -36,19 +46,23 @@
                     <div  class="input-box anima formulario__usurio" id="grupo__usuario" style="--i:1;--j:22;">
                         <input type="usuario" name="usuario" id="usuario" required>
                         <label for="password">Usuario</label>
-                        <i class='bx bxs-user' ></i>
+                        <i class='bx bxs-user'></i>
                         <i class='formulario__validacion-estado fa-solid fa-circle'></i>
-                        <p class="formulario__input-error">No se permite caracteres especiales</p>
+				                <p class="formulario__input-error">No se permite caracteres especiales</p>
                     </div>
                     <div class="input-box anima formulario__grupo" id="grupo__password" style="--i:2;--j:23;">
                         <input type="password" name="password" id="password" required>
                         <label for="password">Contraseña</label>
-                        <i class='bx bxs-lock-alt' ></i>
+                        <i class='bx bxs-lock-alt'></i>
                         <i class='formulario__validacion-estado fa-solid fa-circle'></i>
 				
-				    <p class="formulario__input-error">La Contraseña debe ser mas de 4</p>
+				            <p class="formulario__input-error">La Contraseña debe ser mas de 4</p>
                     </div>
-                    <button type="submit" class="btn7 anima" style="--i:3;--j:24;">Continuar</button>
+                    <div class="formulario__mensaje" id="formulario__mensaje">
+                      <p><i class='bx bxs-error' ></i> <b>Error:</b>contraseña o usuario icorrecto </p>
+                    </div>
+                    <button type="submit" id="ingresar" class="btn7 anima" style="--i:3;--j:24;">Continuar</button>
+                    <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Iniciara seccion pronto </p>
                     <div class="logred-link anima" style="--i:4;--j:25;">
                         <p>No tienes una cuenta? <a href="#" class="registrar-link">Registrate</a></p>
                     </div>
@@ -61,13 +75,13 @@
 
             <div class="form-box register">
                 <h2 class="anima" style="--i:17; --j:0;">Registrarte</h2>
-                <form action="#">
+                <form action="#" id="formulario1">
                     <div class="input-box anima formulario__nombre" id="grupo__nombre" style="--i:18; --j:1;">
                         <input type="text" name="nombre" id="nombre" required>
                         <label for="nombre">NOMBRE</label>
                         <i class='bx bxs-user'></i>
                         <i class='formulario__validacion-estado fa-solid fa-circle'></i>
-				<p class="formulario__input-error">sin caracteres especiales</p>
+				                <p class="formulario__input-error">sin caracteres especiales</p>
 			
                     </div>
                     <div class="input-box anima formulario__grupo" id="grupo__correo" style="--i:19;--j:2;">
@@ -93,11 +107,11 @@
                             Acepto los Terminos y Condiciones
                         </label>
                     </div> -->
-                    <div class="formulario__mensaje" id="formulario__mensaje">
+                    <div class="formulario__mensaje1" id="formulario__mensaje1">
                         <p><i class='bx bxs-error' ></i> <b>Error:</b> llene todo el formulario, nosea imbecil </p>
                     </div>
-                    <button type="submit" class="btn7 anima" style="--i:21;--j:4;">Enviar</button>
-                    <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Se regitro exitosamente!</p>
+                    <button type="submit" id="registro" class="btn7 anima" style="--i:21;--j:4;">Enviar</button>
+                    <p class="formulario__mensaje1-exito" id="formulario__mensaje1-exito">Se regitro exitosamente!</p>
                     <div class="logred-link anima" style="--i:22;--j:5;">
                         <p>Ya tienes una cuenta? <a href="#" class="login-link">Iniciar sesion</a></p>
                     </div>
