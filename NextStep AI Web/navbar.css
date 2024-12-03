@@ -31,12 +31,19 @@
   }
   
   /* Menú de navegación */
-  .nav-links {
+#nav .nav-links {
     display: flex;
-    gap: 20px;
     align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+#nav .nav-links .no-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
     justify-content: center;
-  }
+    align-items: center;
+}
   
   /* Botón de Iniciar sesión */
   .btn {
