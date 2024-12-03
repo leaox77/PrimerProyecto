@@ -12,21 +12,31 @@
   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="responsivo.css">
+  <link rel="stylesheet" href="navbar.css">
 </head>
 
 <body>
   <div id="nav">
 
+    <div id="menu-toggle" class="menu-icon">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+    
     <div class="nav-links">
-      <a href="index.html">INICIO</a><span></span>
+      <div class="no-buttons">
+        <a href="index.html">INICIO</a><span></span>
       <a href="empieza.html">IA</a><span></span>
       <a href="planes.html">Planes</a><span></span>
       <a href="testimonios.html">Testimonios</a><span></span>
+      </div>
+      <a href="iniciar-seccion.html" class="btn">
+        <span class="hola">INICIAR</br>SESION</span>
+      </a>
     </div>
-    <a href="iniciar-seccion.html" class="btn">
-      <span class="hola">INICIAR</br>SESION</span>
-    </a>
-
+    
+    
 
   </div>
   <div id="cursor"></div>
@@ -271,6 +281,7 @@
   integrity="sha512-IHDCHrefnBT3vOCsvdkMvJF/MCPz/nBauQLzJkupa4Gn4tYg5a6VGyzIrjo6QAUy3We5HFOZUlkUpP0dkgE60A=="
   crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="script.js"></script>
+<script src="navbar.js"></script>
 
 
 </html>

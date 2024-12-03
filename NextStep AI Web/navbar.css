@@ -1,0 +1,124 @@
+/* Estilos básicos del navbar */
+#nav {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 999; /* Asegurarse de que el navbar esté por encima del contenido */
+  }
+  
+  /* Esconder todo el contenido de navegación por defecto en pantallas pequeñas */
+  #nav .nav-links,
+  #nav .btn {
+    display: none;
+  }
+  
+  /* Estilo del botón hamburguesa */
+  #menu-toggle {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 1000; /* Asegurarse de que el menú hamburguesa esté por encima */
+  }
+  
+  #menu-toggle .bar {
+    width: 30px;
+    height: 4px;
+    background-color: #777;
+    transition: 0.3s;
+  }
+  
+  /* Menú de navegación */
+  .nav-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Botón de Iniciar sesión */
+  .btn {
+    text-align: center;
+    color: white;
+    background-color: #000000;
+    padding: 10px 20px;
+    border-radius: 50px;
+    display: flex; /* Aseguramos que se pueda mostrar en columnas */
+    justify-content: center;
+  }
+  
+  /* Estilos en pantallas pequeñas */
+  @media (max-width: 760px) {
+    #menu-toggle {
+      display: flex;
+    }
+  
+    /* Cuando #nav tiene la clase active, mostramos el contenido dentro del menú */
+    #nav.active .nav-links {
+      display: flex;
+      flex-direction: row;
+      position: absolute;
+      top: 0px;  /* Mueve el menú justo debajo del navbar */
+      left: 0;
+      right: 0;
+      background-color: #333;
+      padding: 20px;
+      gap: 10px;
+      z-index: 999;
+    gap: 10px;
+    justify-content: space-around;
+    }
+
+    #nav.active .nav-links .no-buttons {
+        display: flex;
+      flex-direction: column;
+        gap: 5px;
+        justify-content: center;
+        align-items: center;
+    }
+  
+    /* Mostrar el botón de "Iniciar Sesión" solo cuando el menú está activo */
+    #nav.active .btn {
+      display: block;  /* Cambiado de flex a block para que se vea correctamente */
+      align-items: center;
+      justify-content: center;
+      margin-top: 0px;  /* Añadido margen superior para que el botón no quede pegado al menú */
+      padding: 25px 15px;
+    }
+  
+    /* Cambiar el icono de tres rayas a X */
+    #nav.active #menu-toggle .bar:nth-child(1) {
+      transform: rotate(45deg);
+      position: relative;
+      top: 7px;
+    }
+  
+    #nav.active #menu-toggle .bar:nth-child(2) {
+      opacity: 0;
+    }
+  
+    #nav.active #menu-toggle .bar:nth-child(3) {
+      transform: rotate(-45deg);
+      position: relative;
+      top: -7px;
+    }
+  }
+  
+  /* Estilos en pantallas grandes (de escritorio) */
+  @media (min-width: 761px) {
+    #nav .nav-links,
+    #nav .btn {
+      display: flex;
+    }
+  
+    #nav .nav-links {
+      flex-direction: row;  /* Muestra las opciones de navegación en fila */
+    }
+  
+    #menu-toggle {
+      display: none;
+    }
+  }
+  
